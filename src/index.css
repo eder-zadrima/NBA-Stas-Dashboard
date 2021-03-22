@@ -17,9 +17,6 @@ code {
 }
 body {
   margin: 0;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
 }
 svg {
 

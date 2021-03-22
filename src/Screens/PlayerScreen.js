@@ -63,6 +63,11 @@ const PlayerScreen = () => {
       
     return (
   <div>
+    <div className="grid grid-cols-5 bg-lakers">
+      <div className="col-span-3">
+      <img className="w-full h-full" src="../images/lebron.png" alt="Lebron James"/>
+      </div>
+    </div>
         <svg
       height={height}
       width={usableWidth}
