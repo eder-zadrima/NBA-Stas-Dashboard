@@ -1,10 +1,10 @@
 import {useState, useEffect} from "react"
-import {csv} from "d3"
+import {csv, sort} from "d3"
 
 
 
-const csvUrl = 
-      'https://gist.githubusercontent.com/anxietyattacked/8c1e436542613d2b0059ec43bc4b71ef/raw/546d08003e6e1ccd4d79b9b009382b4d17b2976c/Lebron-Gamelog.csv'
+const giannisUrl = 'https://gist.githubusercontent.com/anxietyattacked/7892921d1ad637685c9f72d0a1334114/raw/a22094cd767ebafcdec003b93dd3ce5001b50fbc/Giannis-Gamelog.csv'
+const lebronUrl = 'https://gist.githubusercontent.com/anxietyattacked/8c1e436542613d2b0059ec43bc4b71ef/raw/546d08003e6e1ccd4d79b9b009382b4d17b2976c/Lebron-Gamelog.csv'
 
 
 const row = d => {
@@ -28,7 +28,6 @@ const row = d => {
     d["PF"] = +d["PF"]
     d["PTS"] = +d["PTS"]
     d["DREB"] = +d["DREB"]
-    d["GAME_DATE"] = new Date(d["GAME_DATE"])
   return d;
 };
 
@@ -39,7 +38,7 @@ const [data, setData] = useState(null)
 
 
   useEffect(() => {
-    csv(csvUrl, row).then(setData);
+    csv(lebronUrl, row).then(setData);
     
 
   }, []);

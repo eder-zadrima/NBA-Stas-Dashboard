@@ -32,3 +32,28 @@ opacity: .6;
 .Hex {
 stroke: none;
 }
+.tick line{
+  stroke: #C0C0BB;
+}
+.tick text{
+  fill: #635F5D;
+}
+.bar{
+  fill: #005D6E;
+}
+.xlabel{
+  font-size: 2.5em;
+  fill: #635F5D;
+}
+.dropdown-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* table */
+.cells {
+  background-color: white;
+}
+.cells:nth-child(even){
+  background-color: #cccccc;
+}

@@ -9,6 +9,9 @@ import {usePlayerData} from "../data/usePlayerData"
 import {useGameData} from "../data/useGameData"
 import {Marks} from "../components/Marks"
 import {Heatmap} from "../components/Heatmap"
+import {BarChart} from "../components/barchart/BarChart"
+import DataTable from '../components/DataTable';
+import Table from '../components/Table';
 
 
 const width = 960;
@@ -26,7 +29,7 @@ const PlayerScreen = () => {
     const game = useGameData()
     const svgRef = useRef()
    
-    if (!player) {
+    if (!player && !game) {
       return <pre>Loading...</pre>;
     }
     // const courtColor = ""
@@ -62,15 +65,23 @@ const PlayerScreen = () => {
   
       
     return (
-  <div>
+  <div className="px-2">
     <div className="grid grid-cols-5 bg-lakers">
       <div className="col-span-3">
       <img className="w-full h-full" src="../images/lebron.png" alt="Lebron James"/>
-      </div>
+      </div> 
     </div>
+    <div className="bg-lakers-secondary py-10">
+
+    </div>
+    <div className="bg-wood-pattern py-3">
+    <div className="">
+      <BarChart data={game} />
+    </div>
+    <div className="grid grid-cols-10">
         <svg
-      height={height}
-      width={usableWidth}
+        className="col-start-2 col-span-8"
+      viewBox={`0 0 ${usableWidth} ${height}`}
       transform ={`translate(${[margins,margins]})`}
       style={{fill:'none', stroke:"#000"}}
       ref={svgRef}
@@ -93,6 +104,11 @@ const PlayerScreen = () => {
   
         </g>
     </svg>
+    </div>
+    <div className="overflow-x-auto">
+      <DataTable data={game}/>
+    </div>
+    </div>
   </div>
   )
 }
@@ -105,8 +121,3 @@ export default PlayerScreen
 
 
 
-
-  
-const App = () => {
-  
-};

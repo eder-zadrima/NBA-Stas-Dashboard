@@ -26,6 +26,13 @@ module.exports = {
           secondary: "#26282A"
         },
       },
+      padding: {
+        '2/3': '66.666667%',
+        "25/48": "52.083333%",
+        "47/50": "94%",
+
+        
+      },
       backgroundImage: theme => ({
         'wood-pattern': "url('/src/images/retina_wood.png')",
        })
