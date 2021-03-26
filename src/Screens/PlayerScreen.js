@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useMemo} from 'react';
 // import {scaleLinear, scaleSequential, interpolateOranges, scaleSqrt, max, interpolateRdYlBu, contourDensity, interpolateInferno, geoPath, create, selectAll} from "d3"
 import * as d3 from "d3"
 // import {contour} from "d3-contour"
@@ -12,6 +12,7 @@ import {Heatmap} from "../components/Heatmap"
 import {BarChart} from "../components/barchart/BarChart"
 import DataTable from '../components/DataTable';
 import Table from '../components/Table';
+import {columns as cols} from "../data/columns"
 
 
 const width = 960;
@@ -29,9 +30,14 @@ const PlayerScreen = () => {
     const game = useGameData()
     const svgRef = useRef()
    
+    const data = useMemo(() => game, [game])
+    const columns = useMemo(() =>  cols, [])
+
     if (!player && !game) {
       return <pre>Loading...</pre>;
     }
+   
+
     // const courtColor = ""
       const xScale = d3.scaleLinear()
       .domain([-250, 250])
@@ -63,6 +69,10 @@ const PlayerScreen = () => {
       // colors={colors}
       // />
   
+
+        
+
+
       
     return (
   <div className="px-2">
@@ -92,21 +102,19 @@ const PlayerScreen = () => {
       usableWidth={usableWidth}
       margins={margins}
       />
-  
-  <Heatmap
-      player={player}
-      xScale={xScale}
-      yScale={yScale}
-      xValue={xValue}
-      yValue={yValue}
-      />
-    
+        <Heatmap
+  player={player}
+  xScale={xScale}
+  yScale={yScale}
+  xValue={xValue}
+  yValue={yValue}
+  />
   
         </g>
     </svg>
     </div>
-    <div className="overflow-x-auto">
-      <DataTable data={game}/>
+    <div className="">
+      <Table className="" data={data} columns={columns}/>
     </div>
     </div>
   </div>

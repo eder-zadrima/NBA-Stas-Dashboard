@@ -1,87 +1,111 @@
 export const columns = [
-    {
+  {
       Header: "Game Date",
-      accessor: "GAME_DATE"
+      accessor: "GAME_DATE",
+      
     },
     {
         Header: "Match Up",
-        accessor: "MATCHUP"
+        accessor: "MATCHUP",
+        // sticky: 'left',
+        
       },
       {
         Header: "W/L",
-        accessor: "WL"
+        accessor: "WL",
+        
       },
       {
         Header: "Min",
-        accessor: "MIN"
+        accessor: "MIN",
+        
       },
       {
         Header: "FGM",
-        accessor: "FGM"
+        accessor: "FGM",
+        
       },
       {
         Header: "FGA",
-        accessor: "FGA"
+        accessor: "FGA",
+        
       },
       {
         Header: "FG PCT",
-        accessor: "FG_PCT"
+        accessor: "FG_PCT",
+        
       },
       {
         Header: "FG3M",
-        accessor: "FG3M"
+        accessor: "FG3M",
+        
       },
       {
         Header: "FG3A",
-        accessor: "FG3A"
+        accessor: "FG3A",
+        
       },
       {
         Header: "FG3 PCT",
-        accessor: "FG3_PCT"
+        accessor: "FG3_PCT",
+        
       },
       {
         Header: "FTM",
-        accessor: "FTM"
+        accessor: "FTM",
+        
       },
       {
         Header: "FTA",
-        accessor: "FTA"
+        accessor: "FTA",
+        
       },
       {
         Header: "FT PCT",
-        accessor: "FT_PCT"
+        accessor: "FT_PCT",
+        
       },
       {
         Header: "OREB",
-        accessor: "OREB"
+        accessor: "OREB",
+        
       },
       {
         Header: "DREB",
-        accessor: "DREB"
+        accessor: "DREB",
+        
       },
       {
         Header: "REB",
-        accessor: "REB"
+        accessor: "REB",
+        
       },  {
         Header: "AST",
-        accessor: "AST"
+        accessor: "AST",
+        
       },  {
         Header: "STL",
-        accessor: "STL"
+        accessor: "STL",
+        
       },  {
         Header: "BLK",
-        accessor: "BLK"
+        accessor: "BLK",
+        
       },  {
         Header: "TO",
-        accessor: "TOV"
+        accessor: "TOV",
+        
       },  {
         Header: "PF",
-        accessor: "PF"
+        accessor: "PF",
+        
       },  {
         Header: "PTS",
-        accessor: "PTS"
+        accessor: "PTS",
+        
       },  {
         Header: "+/-",
-        accessor: "PLUS_MINUS"
+        accessor: "PLUS_MINUS",
+        
       },
 ]

@@ -34,7 +34,7 @@ const row = d => {
 
 
 export const useGameData = () => {
-const [data, setData] = useState(null)
+const [data, setData] = useState([])
 
 
   useEffect(() => {

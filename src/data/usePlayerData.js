@@ -27,7 +27,7 @@ d['LG_FG_PCT'] = +d['LG_FG_PCT']
 
 
 export const usePlayerData = () => {
-const [data, setData] = useState(null)
+const [data, setData] = useState([])
 console.log(data)
 
   useEffect(() => {

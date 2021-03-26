@@ -57,3 +57,86 @@ stroke: none;
 .cells:nth-child(even){
   background-color: #cccccc;
 }
+
+table {
+  width: 100%;
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: "Roboto", sans-serif;
+}
+
+thead tr:first-of-type th,
+tfoot tr:last-of-type td {
+  text-align: center;
+}
+
+th,
+tfoot td {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 12px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.table {
+  border: 1px solid #ddd;
+}
+.tr:last-child .td {
+  border-bottom: 0;
+}
+
+.th,
+.td {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.th:last-child,
+.td:last-child {
+  border-right: 0;
+}
+
+.table.sticky {
+  overflow: scroll;
+}
+
+.table.sticky .header{
+  position: sticky;
+  z-index: 1;
+  width: fit-content;
+}
+
+.table.sticky .header {
+  top: 0;
+  box-shadow: 0px 3px 3px #ccc;
+}
+
+
+.table.sticky .body {
+  position: relative;
+  z-index: 0;
+}
+
+.table.sticky [data-sticky-td] {
+  position: sticky;
+}
+
+.table.sticky [data-sticky-first-right-td] {
+  box-shadow: -2px 0px 3px #ccc;
+}
+
+.table.sticky [data-sticky-last-left-td] {
+  box-shadow: 2px 0px 3px #ccc;
+}

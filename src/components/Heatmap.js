@@ -3,7 +3,9 @@ import {Marks} from "./Marks"
 import * as d3 from "d3"
 
 export const Heatmap = ({player, xScale, yScale, xValue, yValue }) => {
-    const gRef = useRef()
+  const gRef = useRef()
+ 
+    
   const contours = d3.contourDensity()
     .x(d => xScale(d.x))
     .y(d => yScale(d.y))
