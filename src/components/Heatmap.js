@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {Marks} from "./Marks"
 import * as d3 from "d3"
 
-export const Heatmap = ({player, xScale, yScale, xValue, yValue }) => {
+export const Heatmap = ({player, xScale, yScale, xValue, yValue, comp }) => {
   const gRef = useRef()
  
     
@@ -43,6 +43,7 @@ export const Heatmap = ({player, xScale, yScale, xValue, yValue }) => {
       yScale={yScale} 
       player={player}
       radius={1}
+      comp={comp}
       />
     </g>
     </>

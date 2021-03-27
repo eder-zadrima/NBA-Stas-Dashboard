@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react'
 import {useTable, useBlockLayout} from "react-table"
-import {use, useSticky} from "react-table-sticky"
+import {useSticky} from "react-table-sticky"
 
 
 const Table = ({data, columns}) => {
@@ -20,10 +20,10 @@ const Table = ({data, columns}) => {
     }, useBlockLayout, useSticky);
   
     return (
-      <div {...getTableProps()} className="table sticky" style={{ width: 1000, height: 500 }}>
+      <div {...getTableProps()} className="table sticky">
       <div className="header">
         {headerGroups.map((headerGroup) => (
-          <div {...headerGroup.getHeaderGroupProps()} className="tr">
+          <div {...headerGroup.getHeaderGroupProps()} className="tr text-white bg-gray-800">
             {headerGroup.headers.map((column) => (
               <div {...column.getHeaderProps()} className="th">
                 {column.render('Header')}
@@ -36,7 +36,7 @@ const Table = ({data, columns}) => {
         {rows.map((row) => {
           prepareRow(row);
           return (
-            <div {...row.getRowProps()} className="tr">
+            <div {...row.getRowProps()} className="tr cells">
               {row.cells.map((cell) => (
                 <div {...cell.getCellProps()} className="td">
                   {cell.render('Cell')}
