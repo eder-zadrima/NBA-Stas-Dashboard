@@ -6,17 +6,17 @@ const ShotLegend = () => {
             <text className="sl-text" x={25} y={25}>FG%: 32%</text>
             <circle 
             className="mark"
-            cx={315}
+            cx={352}
             cy={20}
-            r={10}
+            r={15}
             />
-            <text className="sl-text" x={330} y={25} >Makes</text>
+            <text className="sl-text" x={370} y={25} >Make</text>
             <circle className="mark miss"
-            cx={400}
+            cx={437}
             cy={20}
-            r={10}
+            r={15}
             />
-               <text className="sl-text" x={415} y={25} >Misses</text>
+               <text className="sl-text" x={455} y={25} >Miss</text>
         </g>
     )
 }

@@ -31,7 +31,7 @@ const [data, setData] = useState([])
 console.log(data)
 
   useEffect(() => {
-    csv(hardenUrl, row).then(setData);
+    csv(lebronUrl, row).then(setData);
     
 
   }, []);

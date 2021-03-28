@@ -3,14 +3,12 @@ import React, {useRef, useEffect, useMemo, useState} from 'react';
 import * as d3 from "d3"
 // import {contour} from "d3-contour"
 import "../App.css"
-import {BasketballCourt} from "../components/BasketballCourt"
 import {Hexbin} from "../components/Hexbin"
 import {usePlayerData} from "../data/usePlayerData"
 import {useGameData} from "../data/useGameData"
 import {Marks} from "../components/Marks"
 import {Heatmap} from "../components/Heatmap"
 import {BarChart} from "../components/barchart/BarChart"
-import DataTable from '../components/DataTable';
 import Table from '../components/Table';
 import {columns as cols} from "../data/columns"
 import Court from "../components/Court"
@@ -43,7 +41,7 @@ const PlayerScreen = () => {
     }
    
 
-    // const courtColor = ""
+   
       const xScale = d3.scaleLinear()
       .domain([-250, 250])
       .range([0, usableWidth- margins * 2])
@@ -77,12 +75,12 @@ const PlayerScreen = () => {
     <div className="bg-lakers-secondary py-10">
      
     </div>
-    <div className="bg-wood-pattern py-3">
+    <div className="bg-wood-pattern py-3 lg:grid ">
     <div className="">
       <BarChart data={game} />
     </div>
     <div className="space-x-4 bg-gray-800 py-3">
-        <button onClick={() => setShot("Marks")} className="text-white text-xl">Default</button>
+        <button className={shot === "Marks" ? "bg-gray-200" : null} onClick={() => setShot("Marks")} className="text-white text-xl">Shot</button>
         <button onClick={() => setShot("Hex")} className="text-white text-xl">Hex</button>
         <button onClick={() => setShot("Heatmap")} className="text-white text-xl">Heatmap</button>
       </div>
@@ -90,7 +88,7 @@ const PlayerScreen = () => {
   
         <svg
         className="col-start-2 col-span-8"
-      viewBox={`0 0 ${usableWidth} ${650}`}
+      viewBox={`0 0 ${usableWidth} ${560}`}
       style={{fill:'none', stroke:"#000"}}
       ref={svgRef}
       >
@@ -127,9 +125,10 @@ const PlayerScreen = () => {
 
 
         </g>
-        <g transform={`translate(0, 471)`}>
-          <rect className="fill-current text-white" width={usableWidth} height={150}/>
-          <HexLegend/>
+        <g className={`${shot === "Heatmap" ? `hidden` : null}`} transform={`translate(0, 471)`}>
+        {shot === "Heatmap" ? null : <rect className={`fill-current text-white`} width={usableWidth} height={90}/>}
+          
+          {shot === "Marks" ? <ShotLegend/> : shot === "Hex" ? <HexLegend colors={colors}/> : null}
         </g>
     </svg>
     </div>
