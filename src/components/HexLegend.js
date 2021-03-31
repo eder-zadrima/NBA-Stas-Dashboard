@@ -1,21 +1,13 @@
-import React, {useRef, useEffect} from 'react'
+import React from 'react'
 import {hexbin} from 'd3-hexbin'
-import * as d3 from "d3"
+
 
 
 const HexLegend = ({colors}) => {
     const hex = hexbin()
-    const gRef = useRef()
-
-    // <ScaleLegend
-    // color={d3.scaleSequential([-.09,-.06, -.03, 0 , 3, 6, 9], d3.interpolateRdYlBu)}
-    // title={"vs league avg"}
-    // tickFormat={"+%"}
-    // />
-
 
     return (
-        <g ref={gRef}>
+        <g>
         <path
           className="Hex-leg"
           transform={`translate(${18},${35})`}

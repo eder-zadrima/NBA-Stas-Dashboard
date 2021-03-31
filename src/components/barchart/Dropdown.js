@@ -6,7 +6,7 @@ export const Dropdown = ({options,id,selectedValue,onSelectedValueChange}) => (
     onChange={event=>onSelectedValueChange(event.target.value)}
   >
     {options.map(({value,label}) => (
-      <option value={value} selected={value===selectedValue}>{label}</option>
+      <option key={value} value={value} >{label}</option>
     ))}
 </select>
 );

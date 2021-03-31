@@ -21,7 +21,7 @@ module.exports = {
           DEFAULT: "#00471B",
           secondary: "#000000"
         },
-        falcons: {
+        hawks: {
           DEFAULT: "#E03A3E",
           secondary: "#26282A"
         },

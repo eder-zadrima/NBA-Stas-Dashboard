@@ -5,6 +5,7 @@ import Nav from './components/main/Nav';
 import './index.css'
 import HomeScreen from './Screens/HomeScreen';
 import PlayerScreen from './Screens/PlayerScreen';
+import players from "./players"
 
 
 
@@ -18,7 +19,21 @@ const App = () => {
       <Nav/>
       <Switch>
         <Route path="/" exact component={HomeScreen}/>
-        <Route path="/player/lebron" component={PlayerScreen}/>
+        {players.map(player => (
+           <Route key={player.path} path={player.path}>
+           <PlayerScreen 
+           playerUrl={player.playerUrl} 
+           gameUrl={player.gameUrl}
+           playerImg={player.image}
+           name={player.name}
+           teamColors={player.colors}
+           team={player.team}
+           teamLogo={player.teamLogo}
+           number={player.number}
+           />
+         </Route>
+        ))}
+    
       </Switch>
     <Footer/>
     </Router>

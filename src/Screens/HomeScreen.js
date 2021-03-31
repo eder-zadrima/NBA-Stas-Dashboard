@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import Nav from '../components/main/Nav.js'
 import players from "../players.js"
 
 export const HomeScreen = () => {
@@ -17,7 +16,7 @@ export const HomeScreen = () => {
                         </div>
                         <div className={`bg-${player.colors}-secondary py-2`}>
                         <h2 className="text-white text-2xl text-center">{player.name}</h2>
-                        <Link to='/player/lebron'>player</Link>
+                        <Link className="text-white" to={player.path}>player</Link>
                         </div>
                     </div>
                 ))}   

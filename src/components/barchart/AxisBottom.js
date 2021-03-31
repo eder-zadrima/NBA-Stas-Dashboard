@@ -1,6 +1,6 @@
 export const AxisBottom = ({xScale, innerHeight, tickFormat, tickOffset = 3 }) =>
 		xScale.domain().map(tickValue => (
-          <g className="tick"
+          <g key={tickValue} className="tick"
             transform = {`translate(${xScale(tickValue)},0)`}
             >
             <text 

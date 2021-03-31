@@ -1,10 +1,5 @@
 import {useState, useEffect} from "react"
-import {csv, sort} from "d3"
-
-
-
-const giannisUrl = 'https://gist.githubusercontent.com/anxietyattacked/7892921d1ad637685c9f72d0a1334114/raw/a22094cd767ebafcdec003b93dd3ce5001b50fbc/Giannis-Gamelog.csv'
-const lebronUrl = 'https://gist.githubusercontent.com/anxietyattacked/8c1e436542613d2b0059ec43bc4b71ef/raw/546d08003e6e1ccd4d79b9b009382b4d17b2976c/Lebron-Gamelog.csv'
+import {csv} from "d3"
 
 
 const row = d => {
@@ -33,16 +28,16 @@ const row = d => {
 
 
 
-export const useGameData = () => {
+export const useGameData = (gameUrl) => {
 const [data, setData] = useState([])
 
 
   useEffect(() => {
-    csv(lebronUrl, row).then(setData);
-    
+    csv(gameUrl, row).then(setData);
+    console.log(data)
 
-  }, []);
-  console.log(data)
+  }, [gameUrl]);
+
 
 return data
 }

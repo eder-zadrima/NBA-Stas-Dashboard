@@ -4,12 +4,11 @@ export const Marks = ({
     yScale, 
     xValue, 
     yValue,
-    tooltipFormat,
     innerHeight
   }) => 
       data.map(d => (
           <rect 
-            class="bar"
+            className="bar"
             key={xValue(d)}
             x={xScale(xValue(d))+30} 
             y={yScale(yValue(d))} 
