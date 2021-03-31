@@ -6,6 +6,7 @@ import './index.css'
 import HomeScreen from './Screens/HomeScreen';
 import PlayerScreen from './Screens/PlayerScreen';
 import players from "./players"
+import totals from "./data/seasonTotals"
 
 
 
@@ -30,6 +31,7 @@ const App = () => {
            team={player.team}
            teamLogo={player.teamLogo}
            number={player.number}
+           seasonTotals={player.seasonTotals}
            />
          </Route>
         ))}

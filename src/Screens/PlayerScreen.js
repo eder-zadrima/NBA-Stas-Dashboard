@@ -4,6 +4,7 @@ import {scaleLinear, scaleSequential, interpolateRdYlBu} from "d3"
 import {usePlayerData} from "../data/usePlayerData"
 import {useGameData} from "../data/useGameData"
 import {BarChart} from "../components/barchart/BarChart"
+import SeasonTotals from "../components/SeasonTotals"
 import {columns as cols} from "../data/columns"
 // import Table from '../components/Table';
 
@@ -19,18 +20,17 @@ const margins = 0
 const xValue = d => d.x
 const yValue = d => d.y
 
-const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamColors, teamLogo}) => {
+const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamColors, teamLogo, seasonTotals}) => {
   console.log("rendered: PlayerScreen")
     const [shot, setShot] = useState("Marks")
     // const [playerData, setPlayerData] = useState()
     const playerData = usePlayerData(playerUrl)
     const gameData = useGameData(gameUrl)
   
-   
+   console.log(seasonTotals)
     const game = useMemo(() => gameData, [gameData])
     const player = useMemo(() => playerData, [playerData])
     const columns = useMemo(() =>  cols, [])
-   
 
    
       const xScale = useMemo(() => scaleLinear()
@@ -57,8 +57,11 @@ const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamCo
         <img className="w-full h-full" src={teamLogo} alt={team}/>
       </div>
     </div>
-    <div className={`bg-${teamColors}-secondary py-10`}>
-     
+    <div className={`bg-${teamColors}-secondary py-1`}>
+      <h2 className="font-bold text-lg text-center text-white">2019-2020 Regular Season</h2>
+      <SeasonTotals seasonTotals={seasonTotals}/>
+  
+      
     </div>
     <div className="bg-wood-pattern py-3 lg:grid ">
     <div className="">

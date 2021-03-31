@@ -22,10 +22,10 @@ const [data, setData] = useState([])
   useEffect(() => {
   
   csv(playerUrl, row).then(setData);
-  console.log(data)
+
 
   }, []);
-
+  console.log(data)
 
 return data
 }

@@ -34,10 +34,10 @@ const [data, setData] = useState([])
 
   useEffect(() => {
     csv(gameUrl, row).then(setData);
-    console.log(data)
+   
 
   }, [gameUrl]);
-
+  console.log(data)
 
 return data
 }
