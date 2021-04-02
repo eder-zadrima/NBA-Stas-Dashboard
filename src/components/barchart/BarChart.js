@@ -32,7 +32,7 @@ const innerHeight = height-margin.top-margin.bottom;
  const initialYAttribute = 'PTS';
 
 
-export const BarChart = React.memo(({data}) => {
+export const BarChart = memo(({data}) => {
   console.log(`rendered: BarChart`)
 
  

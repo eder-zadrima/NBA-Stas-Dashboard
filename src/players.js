@@ -132,7 +132,7 @@ const players = [
     {
         name: "Giannis Antetokounmpo",
         team: "Milwaukee Bucks",
-        teamLogo: "/images/milwauke.svg",
+        teamLogo: "/images/milwaukee.svg",
         number: "34",
         image: "/images/giannis-sm.png",
         colors: "bucks",

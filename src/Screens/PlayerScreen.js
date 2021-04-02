@@ -47,10 +47,10 @@ const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamCo
 
       
     return (
-  <div className="px-2">
-    <div className={`grid grid-cols-5 bg-${teamColors}`}>
-      <h1 className="col-span-5 text-center text-3xl font-bold py-4">{name} #{number}</h1>
-      <div className="col-span-3">
+  <div className="">
+    <div className={`grid grid-cols-5 md:grid-cols-7 bg-${teamColors}`}>
+      <h1 className={`col-span-5 md:col-span-7 text-center ${teamColors === "bucks" ? "text-white" : null} text-3xl font-bold py-4`}>{name} #{number}</h1>
+      <div className="col-span-3 md:col-start-2">
       <img className="w-full h-full" src={playerImg} alt={name}/>
       </div>
       <div className="col-span-2 bottom-8">
@@ -63,16 +63,18 @@ const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamCo
   
       
     </div>
-    <div className="bg-wood-pattern py-3 lg:grid ">
-    <div className="">
-      <BarChart data={game}/>
+    <div className="bg-wood-pattern lg:grid pt-5 lg:pt-0">
+    <div className="lg:grid lg:grid-cols-10">
+    <div className="col-start-2 col-span-4 lg:mt-16  place-content-center">
+      <BarChart className="place-content-center" data={game}/>
     </div>
-    <div className="space-x-4 bg-gray-800">
+  
+    <div className="col-start-6 col-span-4 grid grid-cols-10">
+    <div className="space-x-4 bg-gray-800 col-span-10 md:col-start-2 md:col-span-8">
         <button className={`text-white text-xl py-3 ${shot === "Marks" ? "bg-gray-800" : null}`} onClick={() => setShot("Marks")}>Shot</button>
         <button onClick={() => setShot("Hex")} className="text-white text-xl py-3">Hex</button>
         <button onClick={() => setShot("Heatmap")} className="text-white text-xl py-3">Heatmap</button>
       </div>
-    <div className="grid grid-cols-10">
     <Suspense fallback={<div>Loading...</div>}>
       <ShotCharts
       shot={shot}
@@ -89,6 +91,7 @@ const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamCo
       </Suspense>
 
     </div>
+    </div>
     <div className="overflow-x-scroll">
     <Suspense fallback={<div>Loading...</div>}>
       <Table className="" data={game} columns={columns}/>
@@ -98,6 +101,7 @@ const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamCo
   </div>
   )
 }
+
 
 export default PlayerScreen
 

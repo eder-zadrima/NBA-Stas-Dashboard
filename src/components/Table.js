@@ -3,7 +3,7 @@ import {useTable, useBlockLayout} from "react-table"
 import {useSticky} from "react-table-sticky"
 
 
-const Table = React.memo(({data, columns}) => {
+const Table = memo(({data, columns}) => {
  console.log(`rendered: table`)
     const {
       getTableProps,

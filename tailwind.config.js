@@ -5,6 +5,9 @@ module.exports = {
   
     extend: {
       colors: {
+        hero: {
+          DEFAULT: "#F53E04"
+        },
         lakers: {
           DEFAULT: "#FDB927",
           secondary: "#552583"
@@ -28,13 +31,15 @@ module.exports = {
       },
       padding: {
         '2/3': '66.666667%',
-        "25/48": "52.083333%",
-        "47/50": "94%",
+        "921/1024": "89.99414%",
+        "732/1023": "71.55435%"
 
         
       },
       backgroundImage: theme => ({
         'wood-pattern': "url('/src/images/retina_wood.png')",
+        "bb-sm": "url('/src/images/bb-sm.jpg')",
+        "bb-lg": "url('/src/images/bb-lg.jpg')",
        })
     },
   },

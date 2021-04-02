@@ -6,7 +6,6 @@ import './index.css'
 import HomeScreen from './Screens/HomeScreen';
 import PlayerScreen from './Screens/PlayerScreen';
 import players from "./players"
-import totals from "./data/seasonTotals"
 
 
 

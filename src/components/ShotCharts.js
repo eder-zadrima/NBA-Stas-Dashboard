@@ -6,7 +6,7 @@ import {Hexbin} from "../components/Hexbin"
 import HexLegend from "../components/HexLegend"
 import {Heatmap} from "../components/Heatmap"
 
-const ShotCharts = React.memo(({shot, usableWidth, height, player, xScale, yScale, xValue, yValue, margins, colors}) => {
+const ShotCharts = memo(({shot, usableWidth, height, player, xScale, yScale, xValue, yValue, margins, colors}) => {
     console.log(`rendered: ShotCharts`)
     return (
         <svg

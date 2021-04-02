@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Porter Sans Block';
+  src: url('fonts/porter-sans-inline-block-webfont.woff') format('woff');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,7 +15,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.hero-header {
+  font-family: "Porter Sans Block"
+}
+.hero-ela {
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -41,7 +52,7 @@ stroke: none;
   stroke: #C0C0BB;
 }
 .tick text{
-  fill: #635F5D;
+  fill: #000000;
 }
 .bar{
   fill: #005D6E;
@@ -67,11 +78,6 @@ stroke: none;
 }
 .cells:nth-child(even){
   background-color: #cccccc;
-}
-
-table {
-
-
 }
 
 thead tr:first-of-type th,
@@ -142,62 +148,3 @@ td {
 .table.sticky [data-sticky-first-right-td] {
   box-shadow: -2px 0px 3px #ccc;
 }
-
-
-
-
-
-
-/* .table {
-  border: 1px solid #ddd;
-}
-.tr:last-child .td {
-  border-bottom: 0;
-}
-
-.th,
-.td {
-  padding: 5px;
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-
-  overflow: hidden;
-}
-
-.th:last-child,
-.td:last-child {
-  border-right: 0;
-}
-
-.table.sticky {
-  overflow: scroll;
-}
-
-.table.sticky .header{
-  position: sticky;
-  z-index: 1;
-  width: fit-content;
-}
-
-.table.sticky .header {
-  top: 0;
-  box-shadow: 0px 3px 3px #ccc;
-}
-
-
-.table.sticky .body {
-  position: relative;
-  z-index: 0;
-}
-
-.table.sticky [data-sticky-td] {
-  position: sticky;
-}
-
-.table.sticky [data-sticky-first-right-td] {
-  box-shadow: -2px 0px 3px #ccc;
-}
-
-.table.sticky [data-sticky-last-left-td] {
-  box-shadow: 2px 0px 3px #ccc;
-} */
