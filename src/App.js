@@ -5,6 +5,7 @@ import Nav from './components/main/Nav';
 import HomeScreen from './Screens/HomeScreen';
 import PlayerScreen from './Screens/PlayerScreen';
 import players from "./players"
+import ScrollToTop from './components/ScollToTop';
 
 
 
@@ -15,6 +16,7 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop/>
       <Nav/>
       <Switch>
         <Route path="/" exact component={HomeScreen}/>
