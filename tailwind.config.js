@@ -1,13 +1,10 @@
 module.exports = {
-  purge: ['./src/**/*.jsx'],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
   
     extend: {
       colors: {
-        hero: {
-          DEFAULT: "#F53E04"
-        },
         lakers: {
           DEFAULT: "#FDB927",
           secondary: "#552583"

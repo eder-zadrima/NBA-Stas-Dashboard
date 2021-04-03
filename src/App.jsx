@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Footer from './components/main/Footer';
 import Nav from './components/main/Nav';
-import './index.css'
 import HomeScreen from './Screens/HomeScreen';
 import PlayerScreen from './Screens/PlayerScreen';
 import players from "./players"

@@ -10,13 +10,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.hero-header {
-  font-family: "Porter Sans Block"
-}
-.hero-ela {
-  text-orientation: upright;
-  writing-mode: vertical-rl;
-}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
