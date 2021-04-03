@@ -9,7 +9,7 @@ export const HomeScreen = () => {
             
             <div className="bg-gray-800 lg:py-16 md:col-span-3 rounded-3xl">
                 <h1 className="text-white text-center text-7xl">HooptyDo</h1>
-                <h2 className="text-gray-200 text-3xl text-center mt-2">Stats, shot charts, and more</h2>
+                <h2 className="text-gray-200 text-3xl text-center mt-2">Stats, Shot Charts, and More</h2>
             </div>
             <div className="grid md:col-span-2 md:grid-cols-5 mt-6 md:mt-0">
             <Link className="grid md:col-span-5 mt-6 md:mt-0" to="/player/lebron"><button className="bg-lakers-secondary md:my-4 lg:my-16  justify-self-center text-white text-5xl py-3 px-7 md:py-1  rounded-3xl">Try Us</button></Link>
@@ -30,9 +30,10 @@ export const HomeScreen = () => {
                         </div>
                         </Link>
                         <div className={`bg-${player.colors}-secondary py-2`}>
+                        <Link className="text-white" to={player.path}> 
                         <h2 className="text-white text-2xl text-center">{player.name} #{player.number}</h2>
+                        </Link>
                         <h3 className="text-gray-100 text-xl text-center">{player.team}</h3>
-                        <Link className="text-white" to={player.path}>player</Link>
                         </div>
                      
                     </div>

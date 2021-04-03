@@ -1,10 +1,10 @@
 import React, {memo} from 'react'
-import Court from "../components/Court"
-import {Marks} from "../components/Marks"
+import Court from "./Court"
+import {Marks} from "./Marks"
 import ShotLegend from "./ShotLegend"
-import {Hexbin} from "../components/Hexbin"
-import HexLegend from "../components/HexLegend"
-import {Heatmap} from "../components/Heatmap"
+import {Hexbin} from "./Hexbin"
+import HexLegend from "./HexLegend"
+import {Heatmap} from "./Heatmap"
 
 const ShotCharts = memo(({shot, usableWidth, height, player, xScale, yScale, xValue, yValue, margins, colors}) => {
     console.log(`rendered: ShotCharts`)
