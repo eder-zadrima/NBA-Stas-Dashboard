@@ -1,5 +1,17 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+purge: {
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+
+  // These options are passed through directly to PurgeCSS
+  options: {
+    safelist: ['bg-lakers',"bg-lakers-secondary",
+    'bg-blazers',"bg-blazers-secondary",
+    'bg-bucks',"bg-bucks-secondary",
+    'bg-hawks',"bg-hawks-secondary",
+    'bg-rockets',"bg-rockets-secondary",
+    'px-4'],
+  },
+},
   darkMode: false, // or 'media' or 'class'
   theme: {
   
