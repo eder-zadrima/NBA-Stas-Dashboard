@@ -8,7 +8,7 @@ export const HomeScreen = () => {
             <div className="px-2 bg-bb-sm sm:bg-bb-lg py-52 object-cover sm:bg-bottom grid grid-cols-1 md:grid-cols-5">
             
             <div className="bg-gray-800 lg:py-16 md:col-span-3 rounded-3xl">
-                <h1 className="text-white text-center text-7xl">HooptyDo</h1>
+                <h1 className="text-white text-center text-7xl">HoopyDo</h1>
                 <h2 className="text-gray-200 text-3xl text-center mt-2">Stats, Shot Charts, and More</h2>
             </div>
             <div className="grid md:col-span-2 md:grid-cols-5 mt-6 md:mt-0">

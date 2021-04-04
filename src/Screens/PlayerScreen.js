@@ -53,8 +53,10 @@ const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamCo
       <div className="col-span-3 md:col-start-2">
       <img className="w-full h-full" src={playerImg} alt={name}/>
       </div>
-      <div className="col-span-2 bottom-8">
-        <img className="w-full h-full" src={teamLogo} alt={team}/>
+      <div className="relative col-span-2 bottom-8 grid place-items-center">
+      {teamColors === "rockets" ? <span className="absolute rounded-full bg-rockets-secondary h-28 sm:h-32 md:h-36 lg:h-52  w-28 sm:w-32 md:w-36 lg:w-52"></span>: null}
+        <img className="w-full h-full z-10" src={teamLogo} alt={team}/>
+        
       </div>
     </div>
     <div className={`bg-${teamColors}-secondary py-1`}>

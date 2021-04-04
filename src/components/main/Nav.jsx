@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <header className="px-2 bg-gray-800 flex w-full py-1">
         <nav className="">
-        <Link to="/"><h1 className="text-3xl text-white font-bold  tracking-wide">HooptyDo</h1></Link>
+        <Link to="/"><h1 className="text-3xl text-white font-bold  tracking-wide">HoopyDo</h1></Link>
         </nav>
     </header>
     )
