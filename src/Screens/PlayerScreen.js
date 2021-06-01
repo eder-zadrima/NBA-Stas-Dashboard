@@ -6,7 +6,11 @@ import {useGameData} from "../data/useGameData"
 import {BarChart} from "../components/barchart/BarChart"
 import SeasonTotals from "../components/SeasonTotals"
 import {columns as cols} from "../data/columns"
-// import Table from '../components/Table';
+import Atl from "../components/teamSVG/Atl"
+import Lakers from "../components/teamSVG/Lakers"
+import Bucks from "../components/teamSVG/Bucks"
+import Blazers from "../components/teamSVG/Blazers"
+import Rockets from "../components/teamSVG/Rockets"
 
 const ShotCharts = React.lazy(() => import('../components/ShotCharts'))
 const Table = React.lazy(() => import('../components/Table'))
@@ -27,7 +31,7 @@ const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamCo
     const playerData = usePlayerData(playerUrl)
     const gameData = useGameData(gameUrl)
   
-   console.log(seasonTotals)
+
     const game = useMemo(() => gameData, [gameData])
     const player = useMemo(() => playerData, [playerData])
     const columns = useMemo(() =>  cols, [])
@@ -55,8 +59,11 @@ const PlayerScreen = ({playerUrl, gameUrl, playerImg, name, team, number, teamCo
       </div>
       <div className="relative col-span-2 bottom-8 grid place-items-center">
       {teamColors === "rockets" ? <span className="absolute rounded-full bg-rockets-secondary h-28 sm:h-32 md:h-36 lg:h-52  w-28 sm:w-32 md:w-36 lg:w-52"></span>: null}
-        <img className="w-full h-full z-10" src={teamLogo} alt={team}/>
-        
+        {teamColors === "lakers" ? <Lakers/> :
+        teamColors === "blazers" ? <Blazers/> :
+        teamColors === "rockets" ? <Rockets className="z-10"/> :
+        teamColors === "hawks" ? <Atl/>:
+        <Bucks/>}
       </div>
     </div>
     <div className={`bg-${teamColors}-secondary py-1`}>

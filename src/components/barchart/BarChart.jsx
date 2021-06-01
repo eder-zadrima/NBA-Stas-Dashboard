@@ -13,15 +13,25 @@ const margin = { top: 50, right:100, bottom: 210, left: 20};
 
 const attributes = [
     {value: "PTS", label: "Points"},
-    {value: "BLK", label: "Blocks"},
     {value: "AST", label: "Assists"},
+    {value: "BLK", label: "Blocks"},
       {value: "STL", label: "Steals"},
       {value: "TOV", label: "Turnovers"},
       {value: "REB", label: "Rebounds"},
       {value: "DREB", label: "Defensive Rebounds"},
       {value: "OREB", label: "Offensive Rebounds"},
+      {value: "FGA", label: "Field Goal Attempts"},
+      {value: "FGM", label: "Field Goal Made"},
     {value: "FG_PCT", label: "Field Goal Percentage"},
-    {value: "FG3_PCT", label: "Three Point Percentage"}
+    {value: "FG3A", label: "Three Point Attempts"},
+    {value: "FG3M", label: "Three Point Made"},
+    {value: "FG3_PCT", label: "Three Point Percentage"},
+    {value: "FTA", label: "Free Throw Attempts"},
+    {value: "FTM", label: "Free Throw Made"},
+    {value: "FT_PCT", label: "Free Throw Percentage"},
+    {value: "MIN", label: "Minutes"},
+    {value: "PF", label: "Personal Fouls"},
+    
   ];
 
 

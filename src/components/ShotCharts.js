@@ -17,7 +17,7 @@ const ShotCharts = memo(({shot, usableWidth, height, player, xScale, yScale, xVa
       >
     <g >
       
-      {shot ==="Marks" ? null : <rect width={usableWidth} height={height} className={`fill-current ${shot === "Heatmap" ? "text-gray-300" : "text-blue-300"}`}/>}
+      {shot ==="Marks" ? null : <rect width={usableWidth} height={height} className={`fill-current ${shot === "Heatmap" ? "text-gray-300" : "text-red-900 text-opacity-30"}`}/>}
       <Court usableWidth={usableWidth} height={height} comp={shot}/>
         {shot === "Marks" ?   
       <Marks
