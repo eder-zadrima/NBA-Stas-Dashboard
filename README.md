@@ -6,7 +6,7 @@
 
 - [Repo](https://github.com/anxietyattacked/NBA-Stats-Dashboard "HoopyDo Repo")
 
-- [Live](https://naughty-neumann-fb4b06.netlify.app/"Live View")
+- [Live](https://naughty-neumann-fb4b06.netlify.app/ "Live View")
 ## Built With
 - JavaScript
 - React
