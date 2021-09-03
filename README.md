@@ -1,3 +1,30 @@
+<h1 align="center">HoopyDo</h1>
+
+<p align="center">NBA Stats and Shot Chart Visualizer</p>
+
+## Links
+
+- [Repo](https://github.com/anxietyattacked/NBA-Stats-Dashboard "HoopyDo Repo")
+
+- [Live](https://naughty-neumann-fb4b06.netlify.app/"Live View")
+## Built With
+- JavaScript
+- React
+- React Router
+- Tailwind
+- HTML
+- D3.js
+- React Table
+- Data from nba_api
+- Data manipulated in pandas
+## Screenshots
+
+![Home Page](/public/images/HoopyDo.png "Home Page")
+
+![](/screenshots/2.png)
+
+![](/screenshots/3.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
