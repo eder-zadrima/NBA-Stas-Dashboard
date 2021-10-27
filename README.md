@@ -4,7 +4,7 @@
 
 ## Links
 
-- [Repo](https://github.com/anxietyattacked/NBA-Stats-Dashboard "HoopyDo Repo")
+- [Repo](https://github.com/yuriihorodnyi21/NBA-Stas-Dashboard "HoopyDo Repo")
 
 - [Live](https://naughty-neumann-fb4b06.netlify.app/ "Live View")
 ## Built With
